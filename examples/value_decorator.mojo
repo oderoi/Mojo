@@ -21,7 +21,25 @@ struct Person:
     var age: Int
 
 
+# Now let run Person struct using main function and perform __init__, __copyinit__ and __moveinit__
 fn main():
-    let me=Person('isack', 27)
+    # Create Person instance 'a'
+    let person_a=Person('isack', 27)
 
-    print("my name is : ", me.name, "i'm", me.age, "years old")
+    # print the person_a data
+    print( person_a.name, person_a.age)
+
+    # copy person_a to person_b
+    let person_b = person_a
+
+    # print the person_a data
+    print( person_b.name, person_b.age)
+
+    # Move let us move person_a to person_c
+    let person_c=person_a^
+
+    # print the person_c data
+    print( person_c.name, person_c.age)
+
+    #after move person_a info to person_c you can no longer access person_a info.
+    print(person_a.name, person_a.age) # it gives error: use of uninitialized value 'person_a'
