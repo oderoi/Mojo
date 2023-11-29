@@ -44,7 +44,7 @@ struct Persons:
 
 
 """
-To run this we write a main() fn and use weither struct Person to run "struct Person" or use struct Persons to run "struct Persons"
+To run this we write a main() fn and use weither struct Person to run  "struct Person" or use struct Persons to run "struct Persons"
 """
 # Now let run Person struct using main function and perform __init__, __copyinit__ and __moveinit__
 fn main():
