@@ -87,8 +87,6 @@ fn main():
         _=B.rows
         _=C.cols
         let gflops = ((2 * M * N * K) / secs) / 1e9
-        #let speedup: Float64 = gflops / base_gflops
         print(gflops, "GFLOP/s")
-        #print(gflops, "GFLOP/s, a", speedup, "x speedup over Python")
 
     bench[matmul_naive](Float64)
