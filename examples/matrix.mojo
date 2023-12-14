@@ -83,9 +83,9 @@ fn main():
 
         let secs = benchmark.run[test_fn](max_runtime_secs=1).mean()
         # Prevent the matrices from being freed before the benchmark run
-        A.data.free()
-        B.data.free()
-        C.data.free()
+        _=A.rows
+        _=B.rows
+        _=C.cols
         let gflops = ((2 * M * N * K) / secs) / 1e9
         #let speedup: Float64 = gflops / base_gflops
         print(gflops, "GFLOP/s")
